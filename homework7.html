@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSCoreHW7</title>
+    <style>
+
+        /* TASK #1 */
+        .task {
+            font-size: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .task1, .task2 {
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .div1 {
+            height: 500px;
+        }
+        .block {
+            height: 306px;
+            width: 456px;
+            margin: 0px auto;
+            padding-bottom: 60px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .small-block1, .small-block2, .small-block3, .small-block4, .small-block5, .small-block6, .small-block7, .small-block8, .small-block9 {
+            height: 100px;
+            width: 150px;
+            cursor: pointer;
+        }
+        .color1 {
+            background-color: darkcyan;
+            border: 1px solid black;
+        }
+        .img1 {
+            background-image: url('https://wallup.net/wp-content/uploads/2017/11/17/265288-moonlight.jpg');
+            background-position: center;
+            background-size: cover;
+            border: 1px solid black;
+        }
+        .color2 {
+            background-color: darkred;
+            border: 1px solid black;
+        }
+        .img2 {
+            background-image: url('https://eskipaper.com/images/beautiful-4.jpg');
+            background-position: center;
+            background-size: cover;
+            border: 1px solid black;
+        }
+        .color3 {
+            background-color: aqua;
+            border: 1px solid black;
+        }
+        .img3 {
+            background-image: url('https://i.pinimg.com/originals/75/a4/c2/75a4c2d1dc2dbce3342109e8270ff4f3.jpg');
+            background-position: center;
+            background-size: cover;
+            border: 1px solid black;
+        }
+        .color4 {
+            background-color: lightgreen;
+            border: 1px solid black;
+        }
+        .img4 {
+            background-image: url('https://wallpapercave.com/wp/wp2809570.jpg');
+            background-position: center;
+            background-size: cover;
+            border: 1px solid black;
+        }
+        .color5 {
+            background-color: gray;
+            border: 1px solid black;
+        }
+        .img5 {
+            background-image: url('https://wallpaperaccess.com/full/215112.jpg');
+            background-position: center;
+            background-size: cover;
+            border: 1px solid black;
+        }
+        .color6 {
+            background-color: chartreuse;
+            border: 1px solid black;
+        }
+        .img6 {
+            background-image: url('https://wallpapercave.com/wp/wp3431585.jpg');
+            background-position: center;
+            background-size: cover;
+            border: 1px solid black;
+        }
+        .color7 {
+            background-color: coral;
+            border: 1px solid black;
+        }
+        .img7 {
+            background-image: url('https://cdn.wallpapersafari.com/57/87/OU7NAl.jpg');
+            background-position: center;
+            background-size: cover;
+            border: 1px solid black;
+        }
+        .color8 {
+            background-color: darkgoldenrod;
+            border: 1px solid black;
+        }
+        .img8 {
+            background-image: url('https://wallpaperaccess.com/full/632198.jpg');
+            background-position: center;
+            background-size: cover;
+            border: 1px solid black;
+        }
+        .color9 {
+            background-color: hotpink;
+            border: 1px solid black;
+        }
+        .img9 {
+            background-image: url('http://www.trendingroot.com/wp-content/uploads/2018/11/Cold-Winter-Pine-Forest-Lake-Photography-HD-Wallpaper-1920x1080.jpg');
+            background-position: center;
+            background-size: cover;
+            border: 1px solid black;
+        }
+
+        /* TASK #1 */
+        body {
+            background-color: #eee;
+        }
+        #container {
+            margin: 0 auto;
+            width: 690px;
+            height: 530px;
+            background-color: #eee;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 71%;
+            line-height: 2;
+        }
+        #keyboard {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            /* display: block; */
+        }
+        /* #keyboard::after {
+            content: "";
+            display: block;
+            clear: both;
+        } */
+        #write {
+            padding: 5px;
+            width: 670px;
+            height: 200px;
+            color: rgb(158, 158, 158);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1em;
+            line-height: 1.5;
+            background: #fff;
+            border: 1px solid #f9f9f9;
+            border-radius: 5px;
+            resize: none;
+            color: transparent;
+            text-shadow: 0 0 0 #8d8d8d;
+        }
+        textarea:focus {
+            outline: none;
+        }
+        li {
+            float: left;
+            margin: 0 5px 5px 0;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #fff;
+            border: 1px solid #f9f9f9;
+            border-radius: 5px;
+            list-style: none;
+            cursor: pointer;
+        }
+        /* .clearfix {
+            display: block;
+            width: 100%;
+            clear: both;
+        }  */
+        .capslock, .tab, .left-shift {
+            clear: left;
+        }
+        .tab, .delete {
+            width: 70px;
+        }
+        .capslock {
+            width: 80px;
+        }
+        .return {
+            width: 77px;
+        }
+        .left-shift {
+            width: 95px;
+        }
+        .right-shift {
+            width: 109px;
+        }
+        .lastitem {
+            margin-right: 0;
+        }
+        .uppercase {
+            text-transform: uppercase;
+        }
+        .space {
+            clear: left;
+            width: 681px;
+        }
+        .active {
+            color: white;
+            position: relative;
+            top: 1px;
+            left: 1px;
+            border-color: rgb(136, 136, 136);
+            background-color: rgb(156, 156, 156);
+        }
+        li:active {
+            color: white;
+            position: relative;
+            top: 1px;
+            left: 1px;
+            border-color: rgb(136, 136, 136);
+            cursor: pointer;
+            background-color: rgb(156, 156, 156);
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <p class="task">Завдання №1</p>
+        <p class="task1">Колір</p>
+        <p class="task2">Зображення</p>
+        <div class="block">
+            <div class="small-block1"></div>
+            <div class="small-block2"></div>
+            <div class="small-block3"></div>
+            <div class="small-block4"></div>
+            <div class="small-block5"></div>
+            <div class="small-block6"></div>
+            <div class="small-block7"></div>
+            <div class="small-block8"></div>
+            <div class="small-block9"></div>
+        </div>
+    </div>
+    <p class="task">Завдання №2</p>
+    <div id="container">
+        <textarea id="write" rows="6" cols="60"></textarea>
+        <ul id="keyboard">
+            <li class="symbol">`</li>
+            <li class="symbol">1</li>
+            <li class="symbol">2</li>
+            <li class="symbol">3</li>
+            <li class="symbol">4</li>
+            <li class="symbol">5</li>
+            <li class="symbol">6</li>
+            <li class="symbol">7</li>
+            <li class="symbol">8</li>
+            <li class="symbol">9</li>
+            <li class="symbol">0</li>
+            <li class="symbol">-</li>
+            <li class="symbol">=</li>
+            <li class="delete lastitem">Backspace</li>
+            <li class="tab">Tab</li>
+            <li class="letter">q</li>
+            <li class="letter">w</li>
+            <li class="letter">e</li>
+            <li class="letter">r</li>
+            <li class="letter">t</li>
+            <li class="letter">y</li>
+            <li class="letter">u</li>
+            <li class="letter">i</li>
+            <li class="letter">o</li>
+            <li class="letter">p</li>
+            <li class="symbol">[</li>
+            <li class="symbol">]</li>
+            <li class="symbol">\</li>
+            <li class="capslock">CapsLock</li>
+            <li class="letter">a</li>
+            <li class="letter">s</li>
+            <li class="letter">d</li>
+            <li class="letter">f</li>
+            <li class="letter">g</li>
+            <li class="letter">h</li>
+            <li class="letter">j</li>
+            <li class="letter">k</li>
+            <li class="letter">l</li>
+            <li class="symbol">;</li>
+            <li class="symbol">'</li>
+            <li class="return lastitem">Enter</li>
+            <li class="left-shift">shift</li>
+            <li class="letter">z</li>
+            <li class="letter">x</li>
+            <li class="letter">c</li>
+            <li class="letter">v</li>
+            <li class="letter">b</li>
+            <li class="letter">n</li>
+            <li class="letter">m</li>
+            <li class="symbol">,</li>
+            <li class="symbol">.</li>
+            <li class="symbol">/</li>
+            <li class="right-shift lastitem">shift</li>
+            <li class="space lastitem">&nbsp;</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
