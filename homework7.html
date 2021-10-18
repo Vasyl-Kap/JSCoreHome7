@@ -165,6 +165,7 @@
             resize: none;
             color: transparent;
             text-shadow: 0 0 0 #8d8d8d;
+        
         }
         textarea:focus {
             outline: none;
@@ -253,7 +254,7 @@
     </div>
     <p class="task">Завдання №2</p>
     <div id="container">
-        <textarea id="write" rows="6" cols="60"></textarea>
+        <textarea id="write" rows="6" cols="60" oninput="this.value=this.value.replace(/[^A-Za-z\s]/g,'');"></textarea>
         <ul id="keyboard">
             <li class="symbol">`</li>
             <li class="symbol">1</li>
